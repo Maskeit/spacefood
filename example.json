@@ -1,0 +1,37 @@
+[
+    {
+        "importador_nombre": "MICRO HERROS DE OCCIDENTE S.A. DE C.V.",
+        "importador_domicilio": "AV. FRESNOS, COL. CD. GRANJA, #43 A, C.P. 45010, ZAPOPAN, JA, MEX.",
+        "importador_rfc": "MHO921021UD0",
+        "pedimento":"",
+        "fecha_pedimento":"",
+        "num_factura":"",
+        "fecha_factura":"",
+        "lugar_em_factura":""
+    },
+    {
+        "proveedores": [
+            {
+                "id_fiscal": "NO36-4559060",
+                "nombre": "PARTS TOWN LLC",
+                "domicilio": "GREENBRIAR DR., #1200, CP. 60101, ADDISON, IL, USA"
+            }
+        ]
+    },    
+    {
+        "partidas": [
+            {
+                "partida":"",
+                "secuencia": "",
+                "valor_aduana": "",
+                "fraccion": "",
+                "descripcion": "",
+                "cantidad_umc": "",
+                "pais_produccion": "",
+                "pais_procedencia": "",
+                "precio_pagado": "",
+                "precio_unitario": ""
+            }
+        ]
+    }
+]

@@ -1,0 +1,5 @@
+spacefood/
+app/data/
+app/data_result/
+app/invoices_json/
+/__pycache__/**
