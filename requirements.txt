@@ -1,4 +1,3 @@
-✅ Entorno virtual activo: /Users/alejandre/Developer/jatenx/spacefood/spacefood
 cffi==2.0.0
 charset-normalizer==3.4.4
 cryptography==46.0.3

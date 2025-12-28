@@ -1,0 +1,80 @@
+1. DATOS DEL IMPORTADOR
+    1. Razón Social
+    2. Dirección
+    3. RFC
+
+2. DATOS DEL PROVEEDOR O COMPRADOR
+    1. Razón Social
+    2. Dirección
+    3. ID Fiscal
+
+3. DATOS DE LA MERCANCIA
+Se agregan todos los artículos estos están separados por números de partidas en el pedimento en el campo de observaciones.
+    1. Descripción
+    2. Clasificación arancelaria
+    3. Cantidad
+    4. Pais de produccion
+    5. Pais de procedencia
+
+
+4. DETERMINACION DEL METODO
+    1. Es compraventa para importacion a territorio nacional?
+    2. El resto de las preguntas seleccionar NO.
+
+5. PRECIO PAGADO O POR PAGAR
+    1. En pagos directos agregar el valor comercial de pedimento.
+    2. En contraprestaciones o pagos indirectos marcar $0.
+    3. En total: es la suma de pagos directos y contraprestaciones.
+
+6. AJUSTES INCREMENTABLES
+Agregar los montos que aparecen en el campo de incrementables. 
+    1. Comisiones: marcar $0.
+    2. Fletes y seguros: Agregar el monto de la suma de Fletes y seguros en pedimento.
+    3. Carga y descarga: Agregar el monto de la suma de otros incrementables y embalajes en pedimento.
+    4. Materiales aportados: marcar $0.
+    5. Tecnología aportada: marcar $0.
+    6. Regalías: marcar $0.
+    7. Reversiones: marcar en $0.
+    8. Total: La suma de todos los campos. 
+
+7. NO INCREMENTABLES
+Los datos se toman del campo de pedimento Valor decrementables. 
+    Estos campos siempre están en $0, en Hoja de cálculo se marcar en $0.
+
+8. VALOR EN ADUANA CONFORME AL METODO DE VALOR DE TRANSACCION
+Los datos de esta sección se toman de los siguientes campos de pedimento:
+
+    1. Precio pagado o por pagar: agregar el precio pagado/valor comercial de pedimento.
+    2. Ajustes incrementables: La suma de val. Seguros, seguros, fletes, embalajes y otros 
+    incrementables de pedimento.
+
+9. LA PRESENTE DETERMINACION DEL VALOR ES VALIDA PARA
+    1. Pedimento: Agregar número de pedimento 
+    2. Fecha del pedimento: Agregar la fecha del pedimento. 
+    3. Factura número: listar los números de todas las facturas de pedimento
+    4. Fecha de la factura: Agregar la fecha de cada una de las facturas 
+    5. Lugar de emisión de la factura: Agregar ciudad, estado y país de la factura. 
+    6. Tipo de factura documento único: Marcar con una X. 
+    7. Marque con una x si cuenta con más de un pedimento: dejar campo vacío.
+
+10. VALOR EN ADUANA DETERMINADO SEGUN OTROS METODOS 
+    Dejar vacío este campo.
+
+11. NO UTILIZO EL VALOR DE TRANSACCION POR
+    Dejar vacío las casillas de este campo.
+
+12 METODO PARA LA DETERMINACION DEL VALOR EN ADUANA
+    Dejar vacío las casillas de este campo.
+
+13 EL SUSCRITO MANIFIESTA BAJO PROTESTA DE DECIR VERDAD QUE LO ASENTADO EN ESTA DECLARACION ES VERIDICO.
+
+
+14 SE ASENTARA EL NUMERO DE PATENTE O AUTORIZACION DEL AGENTE O APODERADO ADUANAL QUE REALIZARA EL DESPACHO DE LAS MERCANCIAS
+    Agregar numero de patente de Agente Aduanal:
+
+    Son los cuatro dígitos del medio. El número de pedimento tiene un formato de 15 dígitos, y los números que siguen a los del año y la aduana (los 4 dígitos centrales) 
+    corresponden al número de la patente del agente aduanal.
+
+    ejemplo *es el que esta entre parentesis*
+
+    25 24 (3139) 5005020 

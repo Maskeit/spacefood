@@ -1,37 +1,87 @@
-[
-    {
+{
+    "metadatos": {},
+    "importador": {
         "importador_nombre": "MICRO HERROS DE OCCIDENTE S.A. DE C.V.",
         "importador_domicilio": "AV. FRESNOS, COL. CD. GRANJA, #43 A, C.P. 45010, ZAPOPAN, JA, MEX.",
         "importador_rfc": "MHO921021UD0",
-        "pedimento":"",
-        "fecha_pedimento":"",
-        "num_factura":"",
-        "fecha_factura":"",
-        "lugar_em_factura":""
+        "pedimento": "",
+        "fecha_pedimento": "",
+        "num_factura": "",
+        "fecha_factura": "",
+        "lugar_em_factura": ""
     },
-    {
-        "proveedores": [
-            {
-                "id_fiscal": "NO36-4559060",
-                "nombre": "PARTS TOWN LLC",
-                "domicilio": "GREENBRIAR DR., #1200, CP. 60101, ADDISON, IL, USA"
-            }
-        ]
-    },    
-    {
-        "partidas": [
-            {
-                "partida":"",
-                "secuencia": "",
-                "valor_aduana": "",
-                "fraccion": "",
-                "descripcion": "",
-                "cantidad_umc": "",
-                "pais_produccion": "",
-                "pais_procedencia": "",
-                "precio_pagado": "",
-                "precio_unitario": ""
-            }
-        ]
+    "proveedores": [
+        {
+            "id_fiscal": "NO36-4559060",
+            "nombre": "PARTS TOWN LLC",
+            "domicilio": "GREENBRIAR DR., #1200, CP. 60101, ADDISON, IL, USA"
+        },
+        {
+            "id_fiscal": "",
+            "nombre": "",
+            "domicilio": ""
+        }
+    ],
+    "mercancias": [
+        {
+            "partida": "",
+            "descripcion": "",
+            "clasificacion_arancelaria": "",
+            "cantidad_umc": "",
+            "pais_produccion": "",
+            "pais_procedencia": ""
+        }
+    ],
+    "determinacion_metodo": {
+        "compraventa": "s",
+        "vinculadas": "n",
+        "restricciones": "n",
+        "contraprestaciones": "n",
+        "regalias": "n"
+    },
+    "precio_pagado": {
+        "precio_pagado": "",
+        "indirectos": "0",
+        "total": ""
+    },
+    "incrementables": {
+        "comisiones": "0",
+        "fletes_seguros": "",
+        "carga_descarga": "",
+        "materiales_aportados": "0",
+        "tecnologia_aportada": "0",
+        "regalias": "0",
+        "reversiones": "0",
+        "total": ""
+    },
+    "no_incrementables": {
+        "gastos_no_relacionados": "0",
+        "fletes_seguros": "0",
+        "gastos_de_construccion": "0",
+        "armado": "0",
+        "contribuciones": "0",
+        "dividendos": "0",
+        "total": "0"
+    },
+    "aduana": {
+        "precio_pagado": "",
+        "ajustes_incrementables": ""
+    },
+    "pedimento": {
+        "num_pedimento": "",
+        "fecha_pedimento": "",
+        "factura_num": "",
+        "fecha_factura": "",
+        "emision_factura": "",
+        "tipo_factura": "x",
+        "mas": "(x)|()"
+    },
+    "suscrito": {
+        "representante": "Jaime Mayagoitia Orozco",
+        "rfc_legal": "MAOJ640430AR7",
+        "fecha_pedimento": ""
+    },
+    "num_patente": {
+        "patente": ""
     }
-]
+}
