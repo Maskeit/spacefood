@@ -10,6 +10,7 @@ import os
 from services.ocr_processor import OCRProcessor
 from services.data_parser import DataParserService
 from services.ocrmypdf_processor import OCRmyPDFService
+from services.webhook_sender import WebhookSenderService
 
 
 def resolve_path(path_str: str) -> Path:
@@ -118,6 +119,31 @@ def main():
         action="store_true"
     )
     
+    # Webhook command - send PDFs to n8n
+    webhook_parser = subparsers.add_parser("webhook", help="Send PDFs to n8n webhook")
+    webhook_parser.add_argument(
+        "source",
+        nargs="?",
+        default=None,
+        help="Source: directory, file, or year (e.g., 2024). If empty, sends all years."
+    )
+    webhook_parser.add_argument(
+        "--url",
+        help="Custom webhook URL (uses default if not provided)",
+        default=None
+    )
+    webhook_parser.add_argument(
+        "--recursive",
+        help="Search subdirectories when source is a directory",
+        action="store_true"
+    )
+    webhook_parser.add_argument(
+        "--delay",
+        help="Delay between files in seconds (default: 1.0)",
+        type=float,
+        default=1.0
+    )
+    
     args = parser.parse_args()
     
     if not args.command:
@@ -139,6 +165,48 @@ def main():
     # Handle Enhance (OCRmyPDF) command
     elif args.command == "enhance":
         handle_enhance_command(args)
+    
+    # Handle Webhook command
+    elif args.command == "webhook":
+        handle_webhook_command(args)
+
+
+def handle_webhook_command(args):
+    """Handle webhook sending command."""
+    service = WebhookSenderService(args.url)
+    
+    if args.source is None:
+        # Send all years
+        print("\n📤 Sending all years to webhook...")
+        result = service.send_all_years()
+    elif args.source.isdigit() and len(args.source) == 4:
+        # Source is a year
+        print(f"\n📤 Sending year {args.source} to webhook...")
+        result = service.send_year(args.source)
+    elif Path(args.source).is_file():
+        # Source is a single file
+        print(f"\n📤 Sending file to webhook...")
+        result = service.send_pdf(args.source)
+        print(json.dumps(result, indent=2))
+        return
+    elif Path(args.source).is_dir():
+        # Source is a directory
+        print(f"\n📤 Sending directory to webhook...")
+        result = service.send_directory(args.source, recursive=args.recursive, delay_between=args.delay)
+    else:
+        # Try as relative path
+        source_path = resolve_path(args.source)
+        if source_path.exists():
+            if source_path.is_file():
+                result = service.send_pdf(str(source_path))
+            else:
+                result = service.send_directory(str(source_path), recursive=args.recursive, delay_between=args.delay)
+        else:
+            print(f"Error: Source not found: {args.source}")
+            sys.exit(1)
+    
+    if not result.get("success"):
+        sys.exit(1)
 
 
 def handle_ocr_command(args):

@@ -3,6 +3,7 @@ Script para extraer texto de PDFs mediante OCR.
 Convierte PDFs en archivos .txt con el texto extraído.
 
 ENTRADA: PDF (accesible o mejorado)
+CREAR: carpeta data_result/ con archivos .txt
 SALIDA: Archivo .txt con texto extraído
 """
 import sys
